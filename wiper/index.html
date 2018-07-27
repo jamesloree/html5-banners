@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Animated Banners</title>
+	<meta name="ad.size" content="width=250,height=250">
+	<style>
+		.wrapper{
+			    position: relative;
+    			border: 2px solid;
+    			overflow: hidden;
+    			width: 250px;
+    			height: 250px;
+    			background: url(img/Dirty.jpg);
+                background-size: 250px 250px;
+    			
+	}
+        .text {
+            position: absolute;
+    		top: 0px;
+            color: white;
+            font-family: helvetica;
+            text-align: center;
+    		left: 0px;
+            clip: rect(0, 250px, 250px, 0);
+    		animation: Clean;
+    		animation-iteration-count: infinite;
+    		animation-duration: 4s;
+            animation-timing-function: linear;
+            
+        }
+        
+        .Wiper {
+            position: absolute;
+            top: 0px;
+    		left: 350px;
+    		height: 250px;
+    		animation: Wiper;
+    		animation-iteration-count: infinite;
+    		animation-duration: 4s;
+            animation-timing-function: linear;
+        }
+		     
+        .Clean{
+			position: absolute;
+    		top: 0px;
+    		left: 0px;
+            height: 250px;
+            clip: rect(0, 250px, 250px, 0);
+    		animation: Clean;
+    		animation-iteration-count: infinite;
+    		animation-duration: 4s;
+            animation-timing-function: linear;
+            
+		}  
+		
+
+		@keyframes Clean {
+			
+            0%{opacity: 1; clip: rect(0, 0px, 250px, 0);}
+			70%{opacity: 1; clip: rect(0, 250px, 250px, 0);}
+			100%{opacity: 1; clip: rect(0, 250px, 250px, 0);
+            }
+		}
+
+        @keyframes Wiper {
+			0%{opacity: 1; left: 0;}
+			70%{opacity: 1; clip: rect(0, 250px, 250px, 0);}
+			100%,100%{opacity: 1;}
+		}
+	
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper" >
+		<img src="img/Clean.jpg" class="Clean"  style="width: 100%;">
+        <img src="img/Wiper.png" class="Wiper" style="width: 100%;">
+         <p class="text">Our tools are the #1 choice of window cleaning professionals</p>
+		
+
+		
+	</div>
+</body>
+</html>
